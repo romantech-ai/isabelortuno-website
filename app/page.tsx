@@ -8,6 +8,7 @@ import FAQ from "@/components/sections/FAQ";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/ui/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
+import { Chatbot } from "@/components/shared/Chatbot";
 
 export default function Home() {
   return (
@@ -33,6 +34,7 @@ export default function Home() {
 
       <Footer />
       <WhatsAppButton />
+      <Chatbot />
     </>
   );
 }

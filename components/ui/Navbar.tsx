@@ -55,7 +55,10 @@ export default function Navbar() {
                 src="/images/logo.png"
                 alt="Gabinete Psicología Isabel Ortuño"
                 fill
-                className="object-contain object-left"
+                className={cn(
+                  "object-contain object-left transition-all duration-300",
+                  !isScrolled && "brightness-0 invert"
+                )}
               />
             </div>
           </a>

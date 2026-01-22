@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -150,6 +151,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans">
+        <GoogleAnalytics />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
