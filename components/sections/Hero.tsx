@@ -221,33 +221,33 @@ export default function Hero() {
               variants={titleVariants}
               initial="hidden"
               animate="visible"
-              className="relative mb-8"
+              className="relative mb-6 sm:mb-8"
             >
-              <span className="absolute -top-10 -left-4 text-[100px] sm:text-[140px] font-serif text-white/10 leading-none select-none pointer-events-none">
+              <span className="absolute -top-6 sm:-top-10 left-0 sm:-left-4 text-[60px] sm:text-[100px] lg:text-[140px] font-serif text-white/10 leading-none select-none pointer-events-none">
                 &ldquo;
               </span>
               <motion.p
-                className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white leading-[1.1]"
+                className="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-[1.15] px-2 sm:px-0"
               >
-                <motion.span variants={wordVariants} className="inline-block mr-3">
+                <motion.span variants={wordVariants} className="inline-block mr-1 sm:mr-2">
                   Lo
                 </motion.span>
-                <motion.span variants={wordVariants} className="inline-block mr-3">
+                <motion.span variants={wordVariants} className="inline-block mr-1 sm:mr-2">
                   que
                 </motion.span>
-                <motion.span variants={wordVariants} className="inline-block mr-3">
+                <motion.span variants={wordVariants} className="inline-block mr-1 sm:mr-2">
                   niegas
                 </motion.span>
-                <motion.span variants={wordVariants} className="inline-block mr-3">
+                <motion.span variants={wordVariants} className="inline-block mr-1 sm:mr-2">
                   te
                 </motion.span>
                 <motion.span variants={wordVariants} className="inline-block">
                   somete,
                 </motion.span>
-                <br className="hidden sm:block" />
+                <br />
                 <motion.span
                   variants={wordVariants}
-                  className="inline-block mr-3 text-transparent bg-clip-text"
+                  className="inline-block mr-1 sm:mr-2 text-transparent bg-clip-text"
                   style={{
                     backgroundImage:
                       "linear-gradient(135deg, #A78BFA 0%, #FAF5FF 50%, #8B5CF6 100%)",
@@ -257,7 +257,7 @@ export default function Hero() {
                 </motion.span>
                 <motion.span
                   variants={wordVariants}
-                  className="inline-block mr-3 text-transparent bg-clip-text"
+                  className="inline-block mr-1 sm:mr-2 text-transparent bg-clip-text"
                   style={{
                     backgroundImage:
                       "linear-gradient(135deg, #A78BFA 0%, #FAF5FF 50%, #8B5CF6 100%)",
@@ -267,7 +267,7 @@ export default function Hero() {
                 </motion.span>
                 <motion.span
                   variants={wordVariants}
-                  className="inline-block mr-3 text-transparent bg-clip-text"
+                  className="inline-block mr-1 sm:mr-2 text-transparent bg-clip-text"
                   style={{
                     backgroundImage:
                       "linear-gradient(135deg, #A78BFA 0%, #FAF5FF 50%, #8B5CF6 100%)",
@@ -277,7 +277,7 @@ export default function Hero() {
                 </motion.span>
                 <motion.span
                   variants={wordVariants}
-                  className="inline-block mr-3 text-transparent bg-clip-text"
+                  className="inline-block mr-1 sm:mr-2 text-transparent bg-clip-text"
                   style={{
                     backgroundImage:
                       "linear-gradient(135deg, #A78BFA 0%, #FAF5FF 50%, #8B5CF6 100%)",
@@ -373,41 +373,6 @@ export default function Hero() {
               </motion.a>
             </motion.div>
 
-            {/* Stats con contadores animados */}
-            <motion.div
-              variants={fadeUpVariants}
-              initial="hidden"
-              animate="visible"
-              custom={0.85}
-              className="flex flex-wrap justify-center gap-x-10 gap-y-6"
-            >
-              {[
-                { value: 15, suffix: "+", label: "Años de experiencia" },
-                { value: 2000, suffix: "+", label: "Pacientes atendidos" },
-                { value: 4.8, suffix: "/5", label: "Google Reviews", isDecimal: true },
-              ].map((stat, index) => (
-                <div key={stat.label} className="text-center">
-                  <p className="text-3xl lg:text-4xl font-serif text-white mb-1">
-                    {stat.isDecimal ? (
-                      <span className="tabular-nums">4.8</span>
-                    ) : (
-                      <AnimatedCounter
-                        end={stat.value}
-                        suffix={stat.suffix}
-                        duration={2000}
-                        delay={index * 200}
-                      />
-                    )}
-                    {stat.isDecimal && (
-                      <span className="text-accent">{stat.suffix}</span>
-                    )}
-                  </p>
-                  <p className="text-white/60 font-sans text-sm tracking-wide">
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
-            </motion.div>
           </div>
         </div>
       </motion.div>

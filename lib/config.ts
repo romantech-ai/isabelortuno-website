@@ -12,9 +12,6 @@ export const siteConfig = {
     name: "María Isabel Ortuño Paniagua",
     title: "Psicóloga Clínica",
     subtitle: "Alcázar de San Juan",
-    experience: "+15 años",
-    patients: "+2000",
-    rating: "4.8",
   },
 
   // Contacto
@@ -119,50 +116,24 @@ export const services = [
   }
 ]
 
-// Testimonios
-export const testimonials = [
-  {
-    id: 1,
-    name: "María G.",
-    text: "Después de años luchando con la ansiedad, encontré en Isabel la ayuda que necesitaba. Su enfoque empático y profesional ha cambiado mi vida.",
-    rating: 5,
-    source: "Doctoralia"
-  },
-  {
-    id: 2,
-    name: "Carlos R.",
-    text: "La terapia de pareja con Isabel nos ayudó a reconectar y mejorar nuestra comunicación. Muy recomendable.",
-    rating: 5,
-    source: "Doctoralia"
-  },
-  {
-    id: 3,
-    name: "Ana P.",
-    text: "Gracias a Isabel, mi hijo adolescente ha aprendido a gestionar sus emociones. El cambio ha sido increíble.",
-    rating: 5,
-    source: "Doctoralia"
-  },
-  {
-    id: 4,
-    name: "Laura M.",
-    text: "Profesional, cercana y muy humana. Me sentí escuchada y comprendida desde el primer momento.",
-    rating: 5,
-    source: "Doctoralia"
-  },
-  {
-    id: 5,
-    name: "Cristina Gómez",
-    text: "Excelente profesional. Muy atenta y comprometida con sus pacientes. La recomiendo totalmente.",
-    rating: 5,
-    source: "Google"
-  },
-  {
-    id: 6,
-    name: "Pedro S.",
-    text: "Isabel me ayudó a superar un momento muy difícil de mi vida. Eternamente agradecido.",
-    rating: 5,
-    source: "Doctoralia"
-  }
+// Testimonios - IMPORTANTE: Solo usar testimonios REALES de Google/Doctoralia
+// Si no hay testimonios reales, dejar array vacío y ocultar la sección
+export const testimonials: Array<{
+  id: number;
+  name: string;
+  text: string;
+  rating: number;
+  source: string;
+}> = [
+  // TODO: Añadir testimonios REALES de Google Maps o Doctoralia
+  // Ejemplo:
+  // {
+  //   id: 1,
+  //   name: "Nombre Real",
+  //   text: "Testimonio copiado textualmente de Google/Doctoralia",
+  //   rating: 5,
+  //   source: "Google"
+  // }
 ]
 
 // FAQs
