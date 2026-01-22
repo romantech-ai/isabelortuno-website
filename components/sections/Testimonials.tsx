@@ -3,45 +3,15 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
+import { testimonials as configTestimonials } from "@/lib/config";
 
-const testimonials = [
-  {
-    id: 1,
-    text: "Gracias a esta persona maravillosa, he comprendido qué es hacer terapia: qué beneficios tiene. Qué es sanar eso que se llama alma.",
-    name: "Paciente verificado",
-    role: "Reseña en Doctoralia",
-  },
-  {
-    id: 2,
-    text: "No solo está para ti durante ese momento de consulta sino que también mediante mensaje de móvil siempre que la necesites. Es fantástica y solo se puede hablar de ella desde la gratitud y cariño.",
-    name: "Paciente verificado",
-    role: "Reseña en Doctoralia",
-  },
-  {
-    id: 3,
-    text: "Es una gran profesional, la mejor. Mi vida cambió con ella, me enseñó a ser persona y salir adelante. Me dio las herramientas que necesitaba para vivir y conseguir mi objetivo.",
-    name: "Paciente verificado",
-    role: "Reseña en Doctoralia",
-  },
-  {
-    id: 4,
-    text: "Es una excelente profesional, y desde que fui por primera vez a su gabinete, mi vida ha cambiado, y ahora estoy completamente feliz. Muchas gracias María Isabel.",
-    name: "Paciente verificado",
-    role: "Reseña en Doctoralia",
-  },
-  {
-    id: 5,
-    text: "Mi vida cambió completamente gracias a ella. Nada de medicación, mucho cariño, mucha atención. ¡Una verdadera profesional!",
-    name: "Paciente verificado",
-    role: "Reseña en Doctoralia",
-  },
-  {
-    id: 6,
-    text: "Muy buena profesional.",
-    name: "Cristina Gómez",
-    role: "Reseña en Google",
-  },
-];
+// Convertir formato de config a formato del componente
+const testimonials = configTestimonials.map((t) => ({
+  id: t.id,
+  text: t.text,
+  name: t.name,
+  role: `Reseña en ${t.source}`,
+}));
 
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);

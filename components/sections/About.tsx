@@ -29,19 +29,6 @@ export default function About() {
                 <div className="absolute bottom-6 left-6 w-24 h-24 border-2 border-accent/20 rounded-full" />
               </div>
 
-              {/* Badge de experiencia */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-                className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-soft-xl p-6 border border-primary/10"
-              >
-                <div className="text-center">
-                  <p className="text-4xl font-serif text-primary font-semibold">+15</p>
-                  <p className="text-sm text-textSecondary mt-1">años de<br />experiencia</p>
-                </div>
-              </motion.div>
             </div>
           </ScrollReveal>
 

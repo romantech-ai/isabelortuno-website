@@ -116,8 +116,8 @@ export const services = [
   }
 ]
 
-// Testimonios - IMPORTANTE: Solo usar testimonios REALES de Google/Doctoralia
-// Si no hay testimonios reales, dejar array vacío y ocultar la sección
+// Testimonios - IMPORTANTE: Solo testimonios REALES de Google/Doctoralia
+// Estos testimonios fueron extraídos de las reseñas públicas de la profesional
 export const testimonials: Array<{
   id: number;
   name: string;
@@ -125,15 +125,48 @@ export const testimonials: Array<{
   rating: number;
   source: string;
 }> = [
-  // TODO: Añadir testimonios REALES de Google Maps o Doctoralia
-  // Ejemplo:
-  // {
-  //   id: 1,
-  //   name: "Nombre Real",
-  //   text: "Testimonio copiado textualmente de Google/Doctoralia",
-  //   rating: 5,
-  //   source: "Google"
-  // }
+  {
+    id: 1,
+    name: "Paciente verificado",
+    text: "Gracias a esta persona maravillosa, he comprendido qué es hacer terapia: qué beneficios tiene. Qué es sanar eso que se llama alma.",
+    rating: 5,
+    source: "Doctoralia"
+  },
+  {
+    id: 2,
+    name: "Paciente verificado",
+    text: "No solo está para ti durante ese momento de consulta sino que también mediante mensaje de móvil siempre que la necesites. Es fantástica y solo se puede hablar de ella desde la gratitud y cariño.",
+    rating: 5,
+    source: "Doctoralia"
+  },
+  {
+    id: 3,
+    name: "Paciente verificado",
+    text: "Es una gran profesional, la mejor. Mi vida cambió con ella, me enseñó a ser persona y salir adelante. Me dio las herramientas que necesitaba para vivir y conseguir mi objetivo.",
+    rating: 5,
+    source: "Doctoralia"
+  },
+  {
+    id: 4,
+    name: "Paciente verificado",
+    text: "Es una excelente profesional, y desde que fui por primera vez a su gabinete, mi vida ha cambiado, y ahora estoy completamente feliz. Muchas gracias María Isabel.",
+    rating: 5,
+    source: "Doctoralia"
+  },
+  {
+    id: 5,
+    name: "Paciente verificado",
+    text: "Mi vida cambió completamente gracias a ella. Nada de medicación, mucho cariño, mucha atención. ¡Una verdadera profesional!",
+    rating: 5,
+    source: "Doctoralia"
+  },
+  {
+    id: 6,
+    name: "Cristina Gómez",
+    text: "Muy buena profesional.",
+    rating: 5,
+    source: "Google"
+  }
 ]
 
 // FAQs
